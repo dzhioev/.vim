@@ -9,7 +9,7 @@ set hlsearch
 
 " Enables persistent undo
 set undofile
-set undodir=~/.vimundo
+set undodir=~/.vim/vimundo
 
 " Enables status line for one window
 set laststatus=2

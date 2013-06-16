@@ -1,6 +1,9 @@
 " Pathogen invocation
 execute pathogen#infect()
 
+" Enable syntax.
+syntax on
+
 " Search options
 set ignorecase
 set smartcase

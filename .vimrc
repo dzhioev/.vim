@@ -35,6 +35,17 @@ let g:clang_close_preview = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
 
+" Command-t options.
+let g:CommandTMaxFiles=1000000
+set wildignore+=*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,
+               \*.a,*.gz,*.swf,*.tmp.*,out/**,out_*/**,**/third_party/**
+highlight CommandTHighlightColor term=reverse
+  \ cterm=bold ctermbg=0* ctermfg=7*
+  \ guibg=Grey
+let g:CommandTHighlightColor='CommandTHighlightColor'
+let g:CommandTMatchWindowReverse=1
+let g:CommandTMaxHeight=20
+
 " enabling local *rc files
 set exrc
 set secure

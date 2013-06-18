@@ -38,7 +38,7 @@ let g:clang_snippets_engine = 'ultisnips'
 " Command-t options.
 let g:CommandTMaxFiles=1000000
 set wildignore+=*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,
-               \*.a,*.gz,*.swf,*.tmp.*,out/**,out_*/**,**/third_party/**
+               \*.a,*.gz,*.swf,*.tmp.*,out/**,out_*/**,**/third_party/**,*.mk
 highlight CommandTHighlightColor term=reverse
   \ cterm=bold ctermbg=0* ctermfg=7*
   \ guibg=Grey
@@ -62,4 +62,9 @@ augroup END
 highlight clear ColorColumn
 highlight ColorColumn term=reverse ctermbg=0* guibg=LightGray
 set colorcolumn=81
+
+" Show lines number
+highlight clear LineNr
+highlight LineNr term=underline cterm=bold ctermfg=0* guifg=LightGray
+set number
 

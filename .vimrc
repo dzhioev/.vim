@@ -34,6 +34,7 @@ let g:clang_hl_errors = 1
 let g:clang_close_preview = 1
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
+let g:clang_complete_auto = 0
 
 " Command-t options.
 let g:CommandTMaxFiles=1000000
@@ -54,7 +55,8 @@ set secure
 highlight link LongLine Error
 highlight link SpacesAtEnd Error
 augroup vimrc_autocmds
-  autocmd BufEnter * match LongLine /\%>80v.\+/
+  " autocmd BufEnter * match LongLine /\%>80v.\+/
+  autocmd BufEnter * match LongLine /\%>80v.$/
   autocmd BufEnter * 2match SpacesAtEnd /\s\+$/
 augroup END
 

@@ -28,14 +28,6 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-" clang_complete options
-let g:clang_library_path = "/usr/lib"
-let g:clang_hl_errors = 1
-let g:clang_close_preview = 1
-let g:clang_snippets = 1
-let g:clang_snippets_engine = 'ultisnips'
-let g:clang_complete_auto = 0
-
 " Command-t options.
 let g:CommandTMaxFiles=1000000
 set wildignore+=*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,

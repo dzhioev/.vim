@@ -28,7 +28,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-" Command-t options.
+" Command-T options.
 let g:CommandTMaxFiles=1000000
 set wildignore+=*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,
                \*.a,*.gz,*.swf,*.tmp.*,out/**,out_*/**,**/third_party/**,*.mk
@@ -61,4 +61,14 @@ set colorcolumn=81
 highlight clear LineNr
 highlight LineNr term=underline cterm=bold ctermfg=0* guifg=LightGray
 set number
+
+" Remapping <leader> key from '\'
+let mapleader = "\<Space>"
+
+" YCM options.
+nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" a.vim options.
+nnoremap <leader>h :A<CR>
 

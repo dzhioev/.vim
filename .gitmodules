@@ -19,6 +19,3 @@
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
 	url = https://github.com/wincent/Command-T.git
-[submodule "bundle/a.vim"]
-	path = bundle/a.vim
-	url = https://github.com/vim-scripts/a.vim.git

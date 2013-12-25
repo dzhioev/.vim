@@ -10,6 +10,9 @@ set smartcase
 set incsearch
 set hlsearch
 
+" Enables backspace
+set bs=2
+
 " Enables persistent undo
 set undofile
 set undodir=~/.vim/vimundo

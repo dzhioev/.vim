@@ -60,6 +60,11 @@ highlight clear ColorColumn
 highlight ColorColumn term=reverse ctermbg=0* guibg=LightGray
 set colorcolumn=81
 
+" Highlight current line
+highlight clear CursorLine
+highlight CursorLine term=underline ctermbg=0* guibg=LightGray
+set cursorline
+
 " Show lines number
 highlight clear LineNr
 highlight LineNr term=underline cterm=bold ctermfg=0* guifg=LightGray

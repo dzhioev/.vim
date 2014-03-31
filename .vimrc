@@ -76,7 +76,6 @@ let mapleader = "\<Space>"
 " YCM options.
 nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
-
-" a.vim options.
-nnoremap <leader>h :A<CR>
+let g:ycm_key_list_select_completion = []
+let g:ycm_key_list_previous_completion = []
 

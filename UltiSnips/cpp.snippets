@@ -11,7 +11,7 @@ def class_name():
 
 endglobal
 
-snippet newh "New header file snippet"
+snippet newh "New header file snippet."
 // Copyright `date +%Y` The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -33,7 +33,7 @@ class `!p snip.rv = class_name()` {
 #endif  // `!p snip.rv = guard_name()`
 endsnippet
 
-snippet newcc "New cc file snippet"
+snippet newcc "New cc file snippet."
 // Copyright `date +%Y` The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -43,4 +43,10 @@ snippet newcc "New cc file snippet"
 `!p snip.rv = class_name()`::`!p snip.rv = class_name()`() {}
 
 `!p snip.rv = class_name()`::~`!p snip.rv = class_name()`() {}
+endsnippet
+
+snippet ns "Puts selected text into namespace."
+namespace${1:} {
+${VISUAL}
+}  // namespace$1
 endsnippet

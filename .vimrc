@@ -67,8 +67,7 @@ set showcmd
 
 " Command-T options.
 let g:CommandTMaxFiles=1000000
-set wildignore+=*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,
-               \*.a,*.gz,*.swf,*.tmp.*,out/**,out_*/**,**/third_party/**,*.mk
+let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,out/**,out_*/**,**/third_party/**,*.mk"
 highlight CommandTHighlightColor term=reverse
   \ cterm=bold ctermbg=0* ctermfg=7*
   \ guibg=Grey

@@ -34,12 +34,12 @@ filetype indent on
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set cinoptions=N-s
 
 " Highlights some formatting errors
 highlight link LongLine Error
 highlight link SpacesAtEnd Error
 augroup vimrc_autocmds
-  " autocmd BufEnter * match LongLine /\%>80v.\+/
   autocmd BufEnter * match LongLine /\%>80v.$/
   autocmd BufEnter * 2match SpacesAtEnd /\s\+$/
 augroup END

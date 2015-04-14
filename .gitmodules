@@ -22,3 +22,7 @@
 [submodule "bundle/checklist.vim"]
 	path = bundle/checklist.vim
 	url = https://github.com/dzhioev/checklist.vim.git
+[submodule "bundle/vim-python-indent"]
+	path = bundle/vim-python-indent
+	url = https://github.com/aarongable/vim-python-indent.git
+	branch = chromium-style

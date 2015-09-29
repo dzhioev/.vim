@@ -65,6 +65,10 @@ map <Space> <leader>
 
 set showcmd
 
+" Stripped line text-object.
+vnoremap il :<c-u>normal! ^vg_<cr>
+onoremap il :normal vil<cr>
+
 " Command-T options.
 let g:CommandTMaxFiles=1000000
 let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,out/**,out_*/**,**/third_party/**,*.mk"

@@ -37,7 +37,9 @@ set softtabstop=2
 set cinoptions=N-s
 
 " Highlights some formatting errors
+highlight clear LongLine
 highlight link LongLine Error
+highlight clear SpaceAtEnd
 highlight link SpacesAtEnd Error
 augroup vimrc_autocmds
   autocmd BufEnter * match LongLine /\%>80v.$/
@@ -97,6 +99,8 @@ let g:ycm_filetype_blacklist = {
       \ 'mail' : 1,
       \ 'javascript': 1
       \}
+highlight clear SyntasticError
+highlight link SyntasticError Error
 
 " checklist.vim options.
 let g:checklist_use_timestamps = 0

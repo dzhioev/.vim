@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.proto setfiletype proto
+autocmd BufRead,BufNewFile *.proto setfiletype proto

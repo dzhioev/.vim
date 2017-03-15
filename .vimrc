@@ -1,10 +1,6 @@
 " Pathogen invocation
 execute pathogen#infect()
 
-" enabling local *rc files
-set exrc
-set secure
-
 " Enable syntax.
 syntax on
 

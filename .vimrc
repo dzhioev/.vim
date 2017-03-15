@@ -34,7 +34,7 @@ filetype indent on
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-set cinoptions=N-s
+set cinoptions=N-s,g0,+2s,l-s,i2s
 
 " Highlights some formatting errors
 highlight clear LongLine
@@ -66,6 +66,7 @@ set number
 map <Space> <leader>
 
 set showcmd
+set ruler
 
 " Stripped line text-object.
 vnoremap il :<c-u>normal! ^vg_<cr>
@@ -73,7 +74,8 @@ onoremap il :normal vil<cr>
 
 " Command-T options.
 let g:CommandTMaxFiles=1000000
-let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,out/**,out_*/**,**/third_party/**,*.mk"
+let g:CommandTTraverseSCM='dir'
+let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,*.mk"
 highlight CommandTHighlightColor term=reverse
   \ cterm=bold ctermbg=0* ctermfg=7*
   \ guibg=Grey
@@ -84,8 +86,9 @@ let g:CommandTMaxHeight=20
 " YCM options.
 nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_key_list_select_completion = []
+let g:ycm_extra_conf_globlist = ['~/*']
 let g:ycm_key_list_previous_completion = []
+let g:ycm_key_list_select_completion = []
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
       \ 'qf' : 1,

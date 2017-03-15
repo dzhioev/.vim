@@ -84,7 +84,7 @@ let g:CommandTMatchWindowReverse=1
 let g:CommandTMaxHeight=20
 
 " YCM options.
-nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>j :YcmCompleter GoTo<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_extra_conf_globlist = ['~/*']
 let g:ycm_key_list_previous_completion = []

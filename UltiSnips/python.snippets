@@ -1,0 +1,13 @@
+snippet newpy "New Python executable"
+#!/usr/bin/env python
+# Confidential Information. "AIM High Tech" LLC
+import argparse
+import sys
+
+def main(argv):
+  parser = argparse.ArgumentParser(description='${VISUAL}')
+  args = parser.parse_args(argv[1:])
+
+if __name__ == '__main__':
+  sys.exit(main(sys.argv))
+endsnippet

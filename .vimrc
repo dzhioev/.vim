@@ -38,14 +38,14 @@ highlight link LongLine Error
 highlight clear SpaceAtEnd
 highlight link SpacesAtEnd Error
 augroup vimrc_autocmds
-  autocmd BufEnter * match LongLine /\%>80v.$/
+  autocmd BufEnter * match LongLine /\%>100v.$/
   autocmd BufEnter * 2match SpacesAtEnd /\s\+$/
 augroup END
 
 " Highlight 81-st column
 highlight clear ColorColumn
 highlight ColorColumn term=reverse ctermbg=0* guibg=LightGray
-set colorcolumn=81
+set colorcolumn=101
 
 " Highlight current line
 highlight clear CursorLine
@@ -70,7 +70,8 @@ onoremap il :normal vil<cr>
 
 " Command-T options.
 let g:CommandTMaxFiles=1000000
-let g:CommandTTraverseSCM='dir'
+let g:CommandTTraverseSCM='file'
+let g:CommandTSCMDirectories='build_release'
 let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,*.mk"
 highlight CommandTHighlightColor term=reverse
   \ cterm=bold ctermbg=0* ctermfg=7*
@@ -81,6 +82,7 @@ let g:CommandTMaxHeight=20
 
 " YCM options.
 nnoremap <leader>j :YcmCompleter GoTo<CR>
+let g:ycm_global_ycm_extra_conf = '$HOME/.vim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_extra_conf_globlist = ['~/*']
 let g:ycm_key_list_previous_completion = []
@@ -104,3 +106,5 @@ highlight link SyntasticError Error
 " checklist.vim options.
 let g:checklist_use_timestamps = 0
 au BufNewFile,BufRead *.chklst setf chklst
+
+set makeprg='$HOME/.vim/cmake_makeprg.sh'

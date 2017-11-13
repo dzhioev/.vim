@@ -72,7 +72,7 @@ onoremap il :normal vil<cr>
 let g:CommandTMaxFiles=1000000
 let g:CommandTTraverseSCM='file'
 let g:CommandTSCMDirectories='build_release'
-let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,*.mk"
+let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,*.mk,*/build_release/*,*/build_debug/*"
 highlight CommandTHighlightColor term=reverse
   \ cterm=bold ctermbg=0* ctermfg=7*
   \ guibg=Grey
@@ -82,6 +82,7 @@ let g:CommandTMaxHeight=20
 
 " YCM options.
 nnoremap <leader>j :YcmCompleter GoTo<CR>
+nnoremap <leader>f :YcmCompleter FixIt<CR>
 let g:ycm_global_ycm_extra_conf = '$HOME/.vim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_extra_conf_globlist = ['~/*']

@@ -29,3 +29,9 @@
 [submodule "bundle/ruscmd"]
 	path = bundle/ruscmd
 	url = https://github.com/vim-scripts/ruscmd.git
+[submodule "bundle/vim-swap"]
+	path = bundle/vim-swap
+	url = https://github.com/machakann/vim-swap
+[submodule "bundle/rainbow"]
+	path = bundle/rainbow
+	url = https://github.com/luochen1990/rainbow.git

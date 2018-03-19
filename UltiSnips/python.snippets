@@ -11,3 +11,20 @@ def main(argv):
 if __name__ == '__main__':
   sys.exit(main(sys.argv))
 endsnippet
+
+snippet newpy3 "New Python executable"
+#!/usr/bin/env python3
+# Confidential Information. "AIM High Tech" LLC
+import argparse
+import log
+import sys
+
+def main(argv):
+  parser = argparse.ArgumentParser(description='')
+  parser.add_argument('-v', '--verbose', help='enable debug logging', action='store_true')
+  args = parser.parse_args(argv[1:])
+  log.set_level(log.DEBUG if args.verbose else log.INFO)
+
+if __name__ == '__main__':
+  sys.exit(main(sys.argv))
+endsnippet

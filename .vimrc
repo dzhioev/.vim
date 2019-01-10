@@ -70,8 +70,7 @@ onoremap il :normal vil<cr>
 
 " Command-T options.
 let g:CommandTMaxFiles=1000000
-let g:CommandTTraverseSCM='file'
-let g:CommandTSCMDirectories='build_release'
+let g:CommandTTraverseSCM='dir'
 let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,*.mk,*/build_release/*,*/build_debug/*"
 highlight CommandTHighlightColor term=reverse
   \ cterm=bold ctermbg=0* ctermfg=7*
@@ -79,6 +78,7 @@ highlight CommandTHighlightColor term=reverse
 let g:CommandTHighlightColor='CommandTHighlightColor'
 let g:CommandTMatchWindowReverse=1
 let g:CommandTMaxHeight=20
+
 
 " YCM options.
 nnoremap <leader>j :YcmCompleter GoTo<CR>
@@ -101,7 +101,6 @@ let g:ycm_filetype_blacklist = {
 \  'mail' : 1,
 \  'javascript': 1
 \}
-let g:ycm_server_python_interpreter = '/usr/bin/python'
 highlight clear SyntasticError
 highlight link SyntasticError Error
 
@@ -117,3 +116,4 @@ let g:raibow_conf = {
 \  }
 \}
 let g:rainbow_active = 1
+let g:sh_no_error = 1

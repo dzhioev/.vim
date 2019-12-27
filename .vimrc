@@ -63,6 +63,7 @@ map <Space> <leader>
 
 set showcmd
 set ruler
+set title
 
 " Stripped line text-object.
 vnoremap il :<c-u>normal! ^vg_<cr>

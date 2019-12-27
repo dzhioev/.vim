@@ -4,5 +4,5 @@
 ( cd bundle/Command-T/ruby/command-t && ruby extconf.rb && make )
 
 # YouCompleteMe
-( cd bundle/YouCompleteMe && ./install.py --clang-completer --system-libclang --gocode-completer )
+( cd bundle/YouCompleteMe && ./install.py --clangd-completer --gocode-completer )
 vim +Helptags +q

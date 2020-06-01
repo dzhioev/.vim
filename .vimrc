@@ -72,7 +72,7 @@ onoremap il :normal vil<cr>
 " Command-T options.
 let g:CommandTMaxFiles=1000000
 let g:CommandTTraverseSCM='dir'
-let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,*.mk,*/build_release/*,*/build_debug/*"
+let g:CommandTWildIgnore=&wildignore . "*.o,*.obj,*.d,*.png,*.svn-base,*.gif,*.jpg,*.pak,*.ninja,*.so,*.a,*.gz,*.swf,*.tmp.*,*.mk,*/build*/*"
 highlight CommandTHighlightColor term=reverse
   \ cterm=bold ctermbg=0* ctermfg=7*
   \ guibg=Grey

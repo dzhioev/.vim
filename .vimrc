@@ -80,31 +80,6 @@ let g:CommandTHighlightColor='CommandTHighlightColor'
 let g:CommandTMatchWindowReverse=1
 let g:CommandTMaxHeight=20
 
-
-" YCM options.
-nnoremap <leader>j :YcmCompleter GoTo<CR>
-nnoremap <leader>f :YcmCompleter FixIt<CR>
-let g:ycm_global_ycm_extra_conf = '$HOME/.vim/ycm_extra_conf.py'
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_extra_conf_globlist = ['~/*']
-let g:ycm_key_list_previous_completion = []
-let g:ycm_key_list_select_completion = []
-let g:ycm_filetype_blacklist = {
-\  'tagbar' : 1,
-\  'qf' : 1,
-\  'notes' : 1,
-\  'markdown' : 1,
-\  'unite' : 1,
-\  'text' : 1,
-\  'vimwiki' : 1,
-\  'pandoc' : 1,
-\  'infolog' : 1,
-\  'mail' : 1,
-\  'javascript': 1
-\}
-highlight clear SyntasticError
-highlight link SyntasticError Error
-
 " checklist.vim options.
 let g:checklist_use_timestamps = 0
 au BufNewFile,BufRead *.chklst setf chklst

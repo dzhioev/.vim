@@ -1,0 +1,4 @@
+{
+  "clangd.path": "clangd-19",
+  "inlayHint.enable": false
+}

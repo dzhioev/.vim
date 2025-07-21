@@ -93,3 +93,15 @@ let g:raibow_conf = {
 \}
 let g:rainbow_active = 1
 let g:sh_no_error = 1
+
+" CoC config
+nnoremap <silent> <leader>d :call ShowDocumentation()<CR>
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+nmap <silent><nowait> <leader>j <Plug>(coc-declaration)

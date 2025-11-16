@@ -1,6 +1,10 @@
 " Pathogen invocation
 execute pathogen#infect()
 
+" Mouse setup
+set mouse=a
+set ttymouse=sgr
+
 " Enable syntax.
 syntax on
 

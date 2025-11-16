@@ -11,57 +11,7 @@ def class_name():
 
 endglobal
 
-snippet newhchrome "New header file snippet."
-// Copyright `date +%Y` The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-#ifndef `!p snip.rv = guard_name()`
-#define `!p snip.rv = guard_name()`
-
-#include "base/macros.h"
-
-class `!p snip.rv = class_name()` {
- public:
-  `!p snip.rv = class_name()`();
-  virtual ~`!p snip.rv = class_name()`();
-
- private:
-  DISALLOW_COPY_AND_ASSIGN(`!p snip.rv = class_name()`);
-};
-
-#endif  // `!p snip.rv = guard_name()`
-endsnippet
-
-snippet newccchrome "New cc file snippet."
-// Copyright `date +%Y` The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-#include "`!p snip.rv = re.sub(r'\.cc$', '.h', relpath())`"
-
-`!p snip.rv = class_name()`::`!p snip.rv = class_name()`() {}
-
-`!p snip.rv = class_name()`::~`!p snip.rv = class_name()`() {}
-endsnippet
-
-snippet newh "New header file snippet."
-// Confidential Information. "AIM High Tech" LLC
-#pragma once
-
-namespace${1:} {
-
-class `!p snip.rv = class_name()` {
- public:
-  `!p snip.rv = class_name()`();
-  virtual ~`!p snip.rv = class_name()`();
-};
-
-}  // namespace$1
-endsnippet
-
 snippet newcc "New cc file snippet."
-// Confidential Information. "AIM High Tech" LLC
 #include "`!p snip.rv = re.sub(r'\.(cc|cpp)$', '.h', relpath())`"
 
 namespace${1:} {

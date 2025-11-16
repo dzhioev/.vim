@@ -4,4 +4,4 @@
 ( cd bundle/Command-T/ruby/command-t && ruby extconf.rb && make )
 
 vim +Helptags +q
-echo "you need to run ':CocInstall coc-clangd coc-json' in vim"
+echo "you need to run ':CocInstall coc-clangd coc-json coc-pyright' in vim"

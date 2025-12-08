@@ -109,3 +109,8 @@ function! ShowDocumentation()
 endfunction
 
 nmap <silent><nowait> <leader>j <Plug>(coc-declaration)
+
+" vim-markdown
+
+let g:vim_markdown_conceal=2
+set conceallevel=2

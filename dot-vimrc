@@ -55,6 +55,13 @@ set colorcolumn=101
 highlight clear CursorLine
 highlight CursorLine term=underline ctermbg=0* guibg=LightGray
 set cursorline
+" Drop the highlight while inserting: restyling a long wrapped line every
+" keystroke is terminal-render-bound and causes per-key lag on long lines
+augroup cursorline_insert
+  autocmd!
+  autocmd InsertEnter * setlocal nocursorline
+  autocmd InsertLeave * setlocal cursorline
+augroup END
 
 " Show lines number
 highlight clear LineNr
